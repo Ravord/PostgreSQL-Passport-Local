@@ -18,7 +18,7 @@ app.use(session({
   saveUninitialized: false,
   secret: process.env.LOCAL_SECRET,
   store: new pgStore({
-    conString: `${process.env.DB_STRING}?sslmode=no-verify`
+    conString: process.env.DB_STRING
   })
 }))
 app.use(passport.initialize())

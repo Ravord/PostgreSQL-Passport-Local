@@ -1,6 +1,6 @@
 const { Client } = require('pg')
 const client = new Client({
-  connectionString: `${process.env.DB_STRING}?sslmode=no-verify`
+  connectionString: process.env.DB_STRING
 })
 client.connect()
   .then(() => {
